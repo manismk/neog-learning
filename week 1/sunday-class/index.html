@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sunday Vikram class</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+
+      .container {
+        display: flex;
+        gap: 10px;
+        height: 50px;
+        margin-bottom: 1rem;
+      }
+      .side {
+        background-color: pink;
+        flex-basis: 250px;
+        flex-shrink: 0;
+      }
+      .main {
+        background-color: pink;
+        flex-grow: 1;
+      }
+
+      .search {
+        background-color: #999;
+        padding: 1rem;
+        margin-bottom: 1rem;
+
+        display: flex;
+        gap: 10px;
+      }
+      .search-text {
+        flex-grow: 1;
+        padding: 0.5rem;
+        border-radius: 200px;
+        border: none;
+      }
+      .btn {
+        background-color: blue;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        flex-basis: 70px;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        padding: 0.5rem;
+        box-shadow: 2px 5px 13px 1px rgba(0, 0, 0, 0.45);
+      }
+
+      .card .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem;
+        border-bottom: 1px black solid;
+      }
+
+      .card .content {
+        border-bottom: 1px black solid;
+        padding: 0.5rem;
+      }
+      .card .footer {
+        margin-left: auto;
+        padding: 0.5rem;
+      }
+
+      .header button {
+        background-color: transparent;
+        border: none;
+      }
+      .footer button {
+        background-color: yellowgreen;
+        border-radius: 5px;
+
+        padding: 0.5rem;
+        margin-right: 0.5rem;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="side">Side content</div>
+      <div class="main">Main content</div>
+    </div>
+    <div class="search">
+      <input
+        type="text"
+        name="
+			"
+        id=""
+        class="search-text"
+        placeholder="Search here"
+      />
+      <button class="btn">Search</button>
+    </div>
+    <div class="card">
+      <div class="header">
+        <p>Card Title</p>
+        <button>X</button>
+      </div>
+      <p class="content">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo vel
+        ducimus quidem fugiat provident voluptatum voluptatem corrupti officia
+        id sit, exercitationem optio. Architecto molestias voluptas repellat
+        recusandae sint, quibusdam est?
+      </p>
+      <div class="footer">
+        <button>yes</button>
+        <button>no</button>
+      </div>
+    </div>
+  </body>
+</html>
