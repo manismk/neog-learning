@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live saturday</title>
+    <style>
+      /*specificity
+       (inline,ids,classes,elemnets)
+
+
+      */
+      button {
+        background-color: red;
+        color: white;
+        padding: 1rem;
+      } /*(0,0,0,1)*/
+      .btn {
+        background-color: blue;
+      } /*(0,0,1,0)*/
+      #main-button {
+        background-color: green;
+      } /*(0,1,0,0)*/
+
+      main nav .btn {
+        background-color: blanchedalmond;
+      } /*(0,0,1,2)*/
+
+      main nav #main-button.btn {
+        background-color: grey;
+      } /*(0,1,1,2)*/
+
+      main nav #main-button.btn.styled-btn {
+        background-color: pink;
+      } /*(0,1,1,0)*/
+
+      main #main-button.btn:hover {
+        background-color: greenyellow;
+      } /*(1,2,2)*/
+
+      section {
+        width: 500px;
+        font-size: 150%;
+        background-color: pink;
+      }
+      p {
+        width: 100px;
+        font-size: 2em;
+        background-color: green;
+      }
+      .title {
+        width: 10%;
+      }
+
+      /* 
+      Declared(authour value) 
+      w-100px, 10%
+      padd-0
+      root foot size--nothing
+      s-fs-150%
+      p-fs: 2em
+      cascaded value(user+browser )
+      w-10%
+      pad--
+      rfs-16px
+      p-fs:2em;
+      specified value(default if none specified) 
+      w-10%
+      pad-0
+      rfs-16px
+      p-fs-2em
+      computed value 
+      w-10%
+      p-fs-> 2em (2 )
+      Used value
+      w-50px
+      Actual value
+      w-50px
+      
+      
+      */
+
+      /* 
+      
+      font -- x% => x* parent's computed value of font size
+
+      length - x% => x * parents comp width
+
+      em - xem font size=> x * par com font size
+
+      em- xem width => x * current element font size
+
+      rem - xrem => x* root ele comp font size
+
+
+      */
+    </style>
+  </head>
+  <body>
+    <main>
+      <nav>
+        <button class="btn styled-btn" id="main-button">Large Button</button>
+      </nav>
+    </main>
+    <section>
+      This is asection text
+      <p class="title">This is a paragraph</p>
+    </section>
+  </body>
+</html>
