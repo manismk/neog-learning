@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenges by vikram</title>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      .icon {
+        position: relative;
+        height: 2rem;
+        width: 2rem;
+      }
+      ion-icon {
+        font-size: 2rem;
+      }
+      .badge {
+        position: absolute;
+        top: -0.5rem;
+        right: -0.7rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: blue;
+        color: white;
+        height: 1rem;
+        width: 1rem;
+        padding: 0.25rem;
+        border-radius: 50%;
+      }
+      .btn {
+        border: none;
+        background-color: #333;
+        color: white;
+        padding: 0.25rem 0.5rem;
+        border-radius: 1rem;
+      }
+      .toast {
+        position: fixed;
+        bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-width: 400px;
+        padding: 0 1rem;
+        background-color: #333;
+        color: white;
+        border-radius: 5px;
+        left: 20px;
+        transition: ease-in;
+      }
+      .action {
+        color: violet;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        cursor: pointer;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Challenge 1 - Mail icon with badge</h2>
+    <div class="icon">
+      <ion-icon name="mail"></ion-icon>
+      <div class="badge">4</div>
+    </div>
+    <h2>Challenge 2 - Toast message</h2>
+    <button id="btnToast" class="btn">Show Toast</button>
+
+    <div class="toast hidden">
+      <p class="message">This is sample toast</p>
+      <p class="action">close</p>
+    </div>
+
+    <script>
+      const btnToast = document.querySelector("#btnToast");
+      const toast = document.querySelector(".toast");
+
+      btnToast.addEventListener("click", () => {
+        toast.classList.toggle("hidden");
+        setTimeout(() => {
+          toast.classList.toggle("hidden");
+        }, 3000);
+      });
+    </script>
+  </body>
+</html>
