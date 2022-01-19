@@ -21,6 +21,11 @@ body {
   border-radius: 0.5rem;
 }
 
+.card img {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
 .card--info,
 .card--footer,
 .card--description {
