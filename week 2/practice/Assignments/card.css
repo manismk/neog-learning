@@ -7,16 +7,15 @@ body {
   font-family: sans-serif;
 }
 .container {
-  display: flex;
-  gap: 4rem;
+  display: grid;
+  gap: 2rem;
   margin: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
 .card {
   display: flex;
   flex-direction: column;
-  max-width: 350px;
+  max-width: 320px;
   box-shadow: 2px 3px 10px 0px rgba(0, 0, 0, 0.8);
   border-radius: 0.5rem;
 }
@@ -25,8 +24,10 @@ body {
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
 }
+.card--info {
+  padding: 0.8rem 1.2rem;
+}
 
-.card--info,
 .card--footer,
 .card--description {
   padding: 0.4rem 1.2rem;
@@ -105,4 +106,31 @@ body {
 
 .card--without--buttons .card--btn--icons {
   margin-left: auto;
+}
+
+.card--overlay {
+  position: relative;
+  align-self: flex-start;
+}
+.card--overlay .card--info {
+  width: 100%;
+
+  position: absolute;
+  top: 145px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.card--horizontal {
+  align-self: flex-start;
+}
+.card--horizontal .card--description {
+  display: none;
+}
+
+.card--horizontal--container {
+  display: flex;
+}
+
+.card--horizontal--container img {
+  width: 35%;
 }
