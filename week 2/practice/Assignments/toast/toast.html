@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toast</title>
+    <script
+      src="https://kit.fontawesome.com/a7cc7f5314.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="toast.css" />
+  </head>
+  <body>
+    <h2>Sample toast</h2>
+    <button class="btn btn--base">Baseline Toast</button>
+    <button class="btn btn--lead">Leading Toast</button>
+
+    <div class="toast toast--baseline hide">
+      <p class="message">This is baseline toast</p>
+      <button class="btn btn--action">ok</button>
+      <button class="btn btn--close"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="toast toast--leading hide">
+      <p class="message">This is leading toast</p>
+      <button class="btn btn--action">ok</button>
+      <button class="btn btn--close"><i class="fas fa-times"></i></button>
+    </div>
+  </body>
+  <script>
+    const btnBase = document.querySelector(".btn--base");
+    const btnLead = document.querySelector(".btn--lead");
+    const toastLead = document.querySelector(".toast--leading");
+    const toastBase = document.querySelector(".toast--baseline");
+
+    btnBase.addEventListener("click", () => {
+      showToast(toastBase);
+    });
+    btnLead.addEventListener("click", () => {
+      showToast(toastLead);
+    });
+    function showToast(toastContainer) {
+      toastContainer.classList.toggle("hide");
+      setTimeout(() => {
+        toastContainer.classList.toggle("hide");
+      }, 5000);
+    }
+  </script>
+</html>
