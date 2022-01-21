@@ -71,11 +71,17 @@ h2 {
 }
 
 .chip--stack {
-  display: block;
+  display: flex;
   max-width: 150px;
   margin: 0.4rem;
 }
 .chip--stack.chip--icon {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.chip--stack > p > i {
+  font-size: 1rem;
+  margin: 0rem 0.25rem;
 }
