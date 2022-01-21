@@ -5,14 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assignments</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: sans-serif;
+        margin: 2rem;
+        background-color: #ddd;
+      }
+      h2 {
+        padding: 1rem 0;
+        text-align: center;
+      }
+
+      .styled-list {
+        margin: 0 auto;
+        max-width: 500px;
+      }
+      .styled-list > ul {
+        list-style: none;
+        background-color: whitesmoke;
+        padding: 1rem;
+        border-radius: 4px;
+      }
+      .styled-list > ul > li {
+        padding: 0.5rem;
+
+        border-radius: 5px;
+      }
+      .styled-list > ul > li > a {
+        display: block;
+        text-decoration: none;
+        font-size: 1.2rem;
+        color: black;
+      }
+      .styled-list > ul > li:hover {
+        background-color: #ddd;
+      }
+    </style>
   </head>
   <body>
-    <ul>
-      <li><a href="./card/card.html">Card</a></li>
-      <li><a href="./badge/badge.html">Badge</a></li>
-      <li><a href="./toast/toast.html">Toast</a></li>
-      <li><a href="./chips/chips.html">Chips</a></li>
-      <li><a href="./header/header.html">Header</a></li>
-    </ul>
+    <h2>Assignments</h2>
+    <div class="styled-list">
+      <ul>
+        <li><a href="./card/card.html">Card</a></li>
+        <li><a href="./badge/badge.html">Badge</a></li>
+        <li><a href="./toast/toast.html">Toast</a></li>
+        <li><a href="./chips/chips.html">Chips</a></li>
+        <li><a href="./header/header.html">Header</a></li>
+      </ul>
+    </div>
   </body>
 </html>
