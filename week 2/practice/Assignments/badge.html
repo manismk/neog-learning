@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Badge</title>
+    <script
+      src="https://kit.fontawesome.com/a7cc7f5314.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="badge.css" />
+  </head>
+  <body>
+    <h2>Text with badge</h2>
+    <span class="badge--text">
+      Text with a badge
+      <span class="badge badge--small badge--top--right badge--yellow">4</span>
+    </span>
+    <h2>Button with badge</h2>
+    <button class="btn badge--button">
+      Button
+      <span class="badge badge--big badge--top--right badge--yellow">4</span>
+    </button>
+
+    <button class="btn badge--button">
+      Button
+      <span class="badge badge--big badge--top--left badge--yellow">4</span>
+    </button>
+    <button class="btn badge--button">
+      Button
+      <span class="badge badge--small badge--top--right badge--yellow">4</span>
+    </button>
+    <h2>Icons with badge</h2>
+    <div class="badge--icon">
+      <i class="fas fa-bell"></i>
+      <span class="badge badge--small badge--top--right badge--yellow">4</span>
+    </div>
+    <div class="badge--icon big--icon">
+      <i class="fas fa-bell"></i>
+      <span class="badge badge--big badge--top--right badge--yellow">4</span>
+    </div>
+    <h2>Status Badges</h2>
+
+    <div class="badge--status--container">
+      <img
+        src="https://randomuser.me/api/portraits/women/77.jpg"
+        class="profile--img"
+        alt="Random user"
+      />
+      <span
+        class="badge badge--status badge--bottom--right badge--online"
+      ></span>
+    </div>
+    <div class="badge--status--container">
+      <img
+        src="https://randomuser.me/api/portraits/men/13.jpg"
+        class="profile--img"
+        alt="Random user"
+      />
+      <span class="badge badge--status badge--bottom--right badge--busy"></span>
+    </div>
+    <div class="badge--status--container">
+      <img
+        src="https://randomuser.me/api/portraits/men/13.jpg"
+        class="profile--img"
+        alt="Random user"
+      />
+      <span class="badge badge--status badge--bottom--right badge--away"></span>
+    </div>
+    <div class="badge--status--container">
+      <img
+        src="https://randomuser.me/api/portraits/women/77.jpg"
+        class="profile--img"
+        alt="Random user"
+      />
+      <span
+        class="badge badge--status badge--bottom--right badge--offline"
+      ></span>
+    </div>
+  </body>
+</html>

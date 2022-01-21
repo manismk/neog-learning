@@ -132,5 +132,7 @@ body {
 }
 
 .card--horizontal--container img {
+  border-radius: 0.5rem;
+  padding: 0.2rem;
   width: 35%;
 }
