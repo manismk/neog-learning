@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chips</title>
+    <script
+      src="https://kit.fontawesome.com/a7cc7f5314.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="chips.css" />
+  </head>
+  <body>
+    <h2>Chips inside the input</h2>
+    <div class="chip--container">
+      <span class="chip"> orange</span>
+      <span class="chip chip--icon">
+        apple
+        <span>
+          <i class="fas fa-times"></i>
+        </span>
+      </span>
+      <span class="chip"> mango </span>
+
+      <input type="text" name="" placeholder="New Fruit..." id="chip--input" />
+    </div>
+    <h2>Basic chips</h2>
+    <span class="chip">orange</span>
+    <span class="chip chip--icon">
+      apple
+      <span>
+        <i class="fas fa-times"></i>
+      </span>
+    </span>
+    <span class="chip chip--primary"> mango</span>
+    <span class="chip chip--secondary"> lemon</span>
+    <h2>Stacked chips</h2>
+    <span class="chip chip--stack">orange</span>
+    <span class="chip chip--stack chip--icon">
+      apple
+      <span>
+        <i class="fas fa-times"></i>
+      </span>
+    </span>
+    <span class="chip chip--stack chip--primary"> mango</span>
+    <span class="chip chip--stack chip--secondary"> lemon</span>
+  </body>
+  <script>
+    const chipsContainer = document.querySelector(".chip--container");
+    const chipInput = document.querySelector("#chip--input");
+    chipInput.addEventListener("change", () => {
+      let newChip = document.createElement("span");
+      newChip.classList.add("chip");
+      newChip.innerText = chipInput.value;
+
+      chipsContainer.insertBefore(newChip, chipInput);
+      chipInput.value = "";
+    });
+  </script>
+</html>
