@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  margin: 2rem;
+}
+p {
+  margin: 1rem;
+}
+
+.standard--container {
+  border: 1px solid black;
+  height: 350px;
+  overflow-y: auto;
+
+  margin-bottom: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blueviolet;
+  color: white;
+}
+
+.header--fixed {
+  position: sticky;
+  top: 0;
+}
+
+.btn {
+  display: block;
+  margin: 1rem;
+  background-color: transparent;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.company--name {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #9d34ff;
+}
+
+.btn--icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+}
+
+.action--btns {
+  display: flex;
+  margin-left: auto;
+}
