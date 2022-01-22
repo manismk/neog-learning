@@ -20,18 +20,24 @@
     <div class="toast toast--baseline hide">
       <p class="message">This is baseline toast</p>
       <button class="btn btn--action">ok</button>
-      <button class="btn btn--close"><i class="fas fa-times"></i></button>
+      <button class="btn btn--close" onclick="closeToast(event)">
+        <i class="fas fa-times"></i>
+      </button>
     </div>
     <div class="toast toast--leading hide">
       <p class="message">This is leading toast</p>
       <button class="btn btn--action">ok</button>
-      <button class="btn btn--close"><i class="fas fa-times"></i></button>
+      <button class="btn btn--close" onclick="closeToast(event)">
+        <i class="fas fa-times"></i>
+      </button>
     </div>
     <div class="toast toast--stacking hide">
       <p class="message">This is stacking toast</p>
       <div class="toast--stack--action">
         <button class="btn btn--action">ok</button>
-        <button class="btn btn--close"><i class="fas fa-times"></i></button>
+        <button class="btn btn--close" onclick="closeToast(event)">
+          <i class="fas fa-times"></i>
+        </button>
       </div>
     </div>
   </body>
@@ -52,11 +58,20 @@
     btnStack.addEventListener("click", () => {
       showToast(toastStack);
     });
-    function showToast(toastContainer) {
+    const showToast = (toastContainer) => {
       toastContainer.classList.toggle("hide");
       setTimeout(() => {
-        toastContainer.classList.toggle("hide");
+        if (!toastContainer.classList.contains("hide"))
+          toastContainer.classList.toggle("hide");
       }, 5000);
-    }
+    };
+    const closeToast = (e) => {
+      if (e.target.parentNode.classList.contains("toast"))
+        e.target.parentNode.classList.add("hide");
+      if (e.target.parentNode.parentNode.classList.contains("toast"))
+        e.target.parentNode.parentNode.classList.add("hide");
+      if (e.target.parentNode.parentNode.parentNode.classList.contains("toast"))
+        e.target.parentNode.parentNode.parentNode.classList.add("hide");
+    };
   </script>
 </html>

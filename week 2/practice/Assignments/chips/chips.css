@@ -82,7 +82,7 @@ h2 {
   align-items: center;
 }
 
-.chip--stack > p > i {
+.chip--icon > p > i {
   font-size: 1rem;
   margin: 0rem 0.25rem;
 }

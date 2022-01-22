@@ -17,7 +17,7 @@
       <span class="chip"> orange</span>
       <span class="chip chip--icon">
         apple
-        <span>
+        <span onclick="closeChip(event)">
           <i class="fas fa-times"></i>
         </span>
       </span>
@@ -28,8 +28,8 @@
     <h2>Basic chips</h2>
     <span class="chip">orange</span>
     <span class="chip chip--icon">
-      apple
-      <span>
+      <p><i class="fab fa-apple"></i> apple</p>
+      <span onclick="closeChip(event)">
         <i class="fas fa-times"></i>
       </span>
     </span>
@@ -37,7 +37,7 @@
     <span class="chip chip--secondary"> lemon</span>
     <h2>Stacked chips</h2>
     <span class="chip chip--stack">orange</span>
-    <span class="chip chip--stack chip--icon">
+    <span class="chip chip--stack chip--icon" onclick="closeChip(event)">
       <p><i class="fab fa-apple"></i> apple</p>
       <span>
         <i class="fas fa-times"></i>
@@ -52,10 +52,20 @@
     chipInput.addEventListener("change", () => {
       let newChip = document.createElement("span");
       newChip.classList.add("chip");
-      newChip.innerText = chipInput.value;
+      newChip.classList.add("chip--icon");
+
+      newChip.innerHTML = `${chipInput.value} <span onclick='closeChip(event)'>
+        <i class="fas fa-times"></i>
+      </span> `;
 
       chipsContainer.insertBefore(newChip, chipInput);
       chipInput.value = "";
     });
+    const closeChip = (e) => {
+      if (e.target.parentNode.classList.contains("chip"))
+        e.target.parentNode.style.display = "none";
+      if (e.target.parentNode.parentNode.classList.contains("chip"))
+        e.target.parentNode.parentNode.style.display = "none";
+    };
   </script>
 </html>

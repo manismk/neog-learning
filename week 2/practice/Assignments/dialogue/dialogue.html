@@ -21,22 +21,26 @@
       <p class="dialogue--heading">Delete Element</p>
       <p class="dialogue--text">Are you sure you want to delete it?</p>
       <div class="dialogue--actions">
-        <button class="btn btn--secondary">Yes</button>
-        <button class="btn btn--primary">Cancel</button>
+        <button onclick="closeDialogue()" class="btn btn--secondary">
+          Yes
+        </button>
+        <button onclick="closeDialogue()" class="btn btn--primary">
+          Cancel
+        </button>
       </div>
     </div>
     <div class="dialogue dialogue--simple hide">
       <p class="dialogue--heading">Select Item</p>
       <div class="dialogue--option">
-        <a href="#" class="simple--container">
+        <a href="#" class="simple--container" onclick="closeDialogue()">
           <span><i class="fas fa-user"></i></span>
           <p class="simple--text">Item1</p>
         </a>
-        <a href="#" class="simple--container">
+        <a href="#" class="simple--container" onclick="closeDialogue()">
           <span><i class="fas fa-user"></i></span>
           <p class="simple--text">Item1</p>
         </a>
-        <a href="#" class="simple--container">
+        <a href="#" class="simple--container" onclick="closeDialogue()">
           <span><i class="fas fa-user"></i></span>
           <p class="simple--text">Item1</p>
         </a>
@@ -72,8 +76,12 @@
         </p>
       </div>
       <div class="dialogue--actions">
-        <button class="btn btn--secondary">Yes</button>
-        <button class="btn btn--primary">Cancel</button>
+        <button class="btn btn--secondary" onclick="closeDialogue()">
+          Yes
+        </button>
+        <button class="btn btn--primary" onclick="closeDialogue()">
+          Cancel
+        </button>
       </div>
     </div>
 
@@ -101,15 +109,19 @@
     });
 
     overlayCont.addEventListener("click", () => {
+      closeDialogue();
+    });
+
+    const closeDialogue = () => {
       dialogueAlertCont.classList.add("hide");
       dialogueSimpleCont.classList.add("hide");
       dialogueConfirmationCont.classList.add("hide");
       overlayCont.classList.add("hide");
-    });
+    };
 
-    function showDialogue(dialogueContainer) {
+    const showDialogue = (dialogueContainer) => {
       dialogueContainer.classList.remove("hide");
       overlayCont.classList.remove("hide");
-    }
+    };
   </script>
 </html>
