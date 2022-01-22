@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dialogue</title>
+    <script
+      src="https://kit.fontawesome.com/a7cc7f5314.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="dialogue.css" />
+  </head>
+  <body>
+    <h2>Dialogue examples</h2>
+    <button class="btn btn--alert">Open alert dialogue</button>
+    <button class="btn btn--simple">Open simple dialogue</button>
+    <button class="btn btn--confirmation">Open confirmation dialogue</button>
+
+    <div class="dialogue dialogue--alert hide">
+      <p class="dialogue--heading">Delete Element</p>
+      <p class="dialogue--text">Are you sure you want to delete it?</p>
+      <div class="dialogue--actions">
+        <button class="btn btn--secondary">Yes</button>
+        <button class="btn btn--primary">Cancel</button>
+      </div>
+    </div>
+    <div class="dialogue dialogue--simple hide">
+      <p class="dialogue--heading">Select Item</p>
+      <div class="dialogue--option">
+        <a href="#" class="simple--container">
+          <span><i class="fas fa-user"></i></span>
+          <p class="simple--text">Item1</p>
+        </a>
+        <a href="#" class="simple--container">
+          <span><i class="fas fa-user"></i></span>
+          <p class="simple--text">Item1</p>
+        </a>
+        <a href="#" class="simple--container">
+          <span><i class="fas fa-user"></i></span>
+          <p class="simple--text">Item1</p>
+        </a>
+      </div>
+    </div>
+    <div class="dialogue dialogue--confirmation hide">
+      <p class="dialogue--heading">Select Item</p>
+      <div class="dialogue--option">
+        <p class="radio--container">
+          <input type="radio" name="choice" id="item1" /><label for="item1">
+            Item 1</label
+          >
+        </p>
+        <p class="radio--container">
+          <input type="radio" name="choice" id="item2" /><label for="item2">
+            Item 2</label
+          >
+        </p>
+        <p class="radio--container">
+          <input type="radio" name="choice" id="item3" /><label for="item3">
+            Item 3</label
+          >
+        </p>
+        <p class="radio--container">
+          <input type="radio" name="choice" id="item4" /><label for="item4">
+            Item 4</label
+          >
+        </p>
+        <p class="radio--container">
+          <input type="radio" name="choice" id="item5" /><label for="item5">
+            Item 5</label
+          >
+        </p>
+      </div>
+      <div class="dialogue--actions">
+        <button class="btn btn--secondary">Yes</button>
+        <button class="btn btn--primary">Cancel</button>
+      </div>
+    </div>
+
+    <div class="overlay hide"></div>
+  </body>
+  <script>
+    const btnAlert = document.querySelector(".btn--alert");
+    const btnSimple = document.querySelector(".btn--simple");
+    const btnConfirmation = document.querySelector(".btn--confirmation");
+    const dialogueAlertCont = document.querySelector(".dialogue--alert");
+    const dialogueSimpleCont = document.querySelector(".dialogue--simple");
+    const dialogueConfirmationCont = document.querySelector(
+      ".dialogue--confirmation"
+    );
+    const overlayCont = document.querySelector(".overlay");
+
+    btnAlert.addEventListener("click", () => {
+      showDialogue(dialogueAlertCont);
+    });
+    btnSimple.addEventListener("click", () => {
+      showDialogue(dialogueSimpleCont);
+    });
+    btnConfirmation.addEventListener("click", () => {
+      showDialogue(dialogueConfirmationCont);
+    });
+
+    overlayCont.addEventListener("click", () => {
+      dialogueAlertCont.classList.add("hide");
+      dialogueSimpleCont.classList.add("hide");
+      dialogueConfirmationCont.classList.add("hide");
+      overlayCont.classList.add("hide");
+    });
+
+    function showDialogue(dialogueContainer) {
+      dialogueContainer.classList.remove("hide");
+      overlayCont.classList.remove("hide");
+    }
+  </script>
+</html>

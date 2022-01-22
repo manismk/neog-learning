@@ -38,11 +38,14 @@ h2 {
 
 .toast--baseline {
   bottom: 2rem;
-  left: calc(50vw - 10rem);
+
+  left: 50%;
+  transform: translateX(-50%);
 }
 .toast--stacking {
   bottom: 2rem;
-  left: calc(50vw - 5rem);
+  left: 50%;
+  transform: translateX(-50%);
 }
 .toast--leading {
   bottom: 2rem;
