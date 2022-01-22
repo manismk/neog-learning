@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabs</title>
+    <link rel="stylesheet" href="tabs.css" />
+  </head>
+  <body>
+    <h2>Tabs</h2>
+    <div class="tabs--container">
+      <button class="tab--btn active">Tab one</button>
+      <button class="tab--btn">Tab two</button>
+      <button class="tab--btn">Tab three</button>
+    </div>
+    <h2>Example</h2>
+    <div class="tab--example--container">
+      <div class="tabs--container">
+        <button class="tab--btn tab-btn-html active">Html</button>
+        <button class="tab--btn tab-btn-css">CSS</button>
+        <button class="tab--btn tab-btn-js">javascript</button>
+      </div>
+      <div class="tab--content content--html">
+        <h3 class="tab--content--head">Html</h3>
+        <p class="tab--content--description">
+          HTML is the standard markup language for Web pages. With HTML you can
+          create your own Website.
+        </p>
+      </div>
+      <div class="tab--content content--css hide">
+        <h3 class="tab--content--head">Css</h3>
+        <p class="tab--content--description">
+          CSS is the language we use to style an HTML document. CSS describes
+          how HTML elements should be displayed.
+        </p>
+      </div>
+      <div class="tab--content content--js hide">
+        <h3 class="tab--content--head">Javacript</h3>
+        <p class="tab--content--description">
+          JavaScript is the world's most popular programming language.
+          JavaScript is the programming language of the Web
+        </p>
+      </div>
+    </div>
+  </body>
+  <script>
+    const btnHtml = document.querySelector(".tab-btn-html");
+    const btnCss = document.querySelector(".tab-btn-css");
+    const btnJs = document.querySelector(".tab-btn-js");
+    const contHtml = document.querySelector(".content--html");
+    const contCss = document.querySelector(".content--css");
+    const contJs = document.querySelector(".content--js");
+
+    btnHtml.addEventListener("click", () => {
+      clearBtnCont();
+      addClass(btnHtml, contHtml);
+    });
+    btnCss.addEventListener("click", () => {
+      clearBtnCont();
+      addClass(btnCss, contCss);
+    });
+    btnJs.addEventListener("click", () => {
+      clearBtnCont();
+      addClass(btnJs, contJs);
+    });
+
+    function clearBtnCont() {
+      btnHtml.classList.remove("active");
+      btnCss.classList.remove("active");
+      btnJs.classList.remove("active");
+      contHtml.classList.add("hide");
+      contCss.classList.add("hide");
+      contJs.classList.add("hide");
+    }
+    function addClass(btnName, contName) {
+      btnName.classList.add("active");
+      contName.classList.remove("hide");
+    }
+  </script>
+</html>
