@@ -40,6 +40,10 @@ h2 {
   bottom: 2rem;
   left: calc(50vw - 10rem);
 }
+.toast--stacking {
+  bottom: 2rem;
+  left: calc(50vw - 5rem);
+}
 .toast--leading {
   bottom: 2rem;
   left: 2rem;
@@ -77,4 +81,13 @@ h2 {
 
 .hide {
   display: none;
+}
+
+.toast--stacking {
+  flex-direction: column;
+  padding: 1rem;
+}
+.toast--stack--action {
+  display: flex;
+  margin-left: auto;
 }

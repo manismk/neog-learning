@@ -15,6 +15,7 @@
     <h2>Sample toast</h2>
     <button class="btn btn--base">Baseline Toast</button>
     <button class="btn btn--lead">Leading Toast</button>
+    <button class="btn btn--stack">Stacking Toast</button>
 
     <div class="toast toast--baseline hide">
       <p class="message">This is baseline toast</p>
@@ -26,18 +27,30 @@
       <button class="btn btn--action">ok</button>
       <button class="btn btn--close"><i class="fas fa-times"></i></button>
     </div>
+    <div class="toast toast--stacking hide">
+      <p class="message">This is stacking toast</p>
+      <div class="toast--stack--action">
+        <button class="btn btn--action">ok</button>
+        <button class="btn btn--close"><i class="fas fa-times"></i></button>
+      </div>
+    </div>
   </body>
   <script>
     const btnBase = document.querySelector(".btn--base");
     const btnLead = document.querySelector(".btn--lead");
+    const btnStack = document.querySelector(".btn--stack");
     const toastLead = document.querySelector(".toast--leading");
     const toastBase = document.querySelector(".toast--baseline");
+    const toastStack = document.querySelector(".toast--stacking");
 
     btnBase.addEventListener("click", () => {
       showToast(toastBase);
     });
     btnLead.addEventListener("click", () => {
       showToast(toastLead);
+    });
+    btnStack.addEventListener("click", () => {
+      showToast(toastStack);
     });
     function showToast(toastContainer) {
       toastContainer.classList.toggle("hide");
