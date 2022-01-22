@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  margin: 2rem;
+  background-color: #ccc;
+}
+
+.drawer--container {
+  background-color: #fff;
+  max-width: 18rem;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.drawer {
+  padding: 1.5rem;
+}
+.drawer--header {
+  margin-bottom: 1rem;
+}
+.drawer--header--title {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.drawer--nav .drawer--link {
+  text-decoration: none;
+  display: flex;
+  padding: 0.7rem 0.3rem;
+  font-size: 1.1rem;
+  gap: 2rem;
+  color: black;
+  align-items: center;
+  border-radius: 5px;
+  margin: 0.2rem 0;
+}
+.drawer--link i {
+  font-size: 1.2rem;
+}
+.drawer--nav .drawer--link:hover {
+  background-color: #ddd;
+}
+.drawer--link.active {
+  color: blueviolet;
+  background-color: #f1e2ff;
+}
+
+.permannent--drawer {
+  border: 1px solid black;
+  height: 400px;
+  overflow-y: auto;
+  margin: 2rem 0;
+}
+
+.permannent--drawer .drawer {
+  max-width: 18rem;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  height: 100%;
+  overflow-y: auto;
+}
+.permannent--drawer .main {
+  margin-left: 18rem;
+  margin-top: -400px;
+}
+.permannent--drawer .main header {
+  background-color: blueviolet;
+  color: white;
+  padding: 2rem;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.permannent--drawer .main p {
+  padding: 1rem;
+}
+
+.permannent--drawer .drawer--footer:not(:nth-last-child(1)) {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.drawer--label {
+  padding: 0.8rem 0;
+}
