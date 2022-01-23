@@ -28,6 +28,7 @@ h2 {
   padding: 1rem;
   font-size: 0.9rem;
   font-weight: 500;
+  white-space: nowrap;
 
   text-transform: uppercase;
 }
@@ -61,4 +62,23 @@ h2 {
 }
 .hide {
   display: none;
+}
+.tabs--container.slider {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 3px;
+}
+
+.slider::-webkit-scrollbar {
+  padding-top: 3px;
+  height: 5px;
+}
+
+.slider::-webkit-scrollbar-track {
+  background-color: #eee;
+}
+
+.slider::-webkit-scrollbar-thumb {
+  background-color: blueviolet;
+  border-radius: 5px;
 }
