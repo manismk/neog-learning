@@ -11,11 +11,12 @@ body {
 
 h2 {
   padding: 1rem 0;
+  text-align: center;
 }
 
 .tabs--container {
   background-color: #ddd;
-  max-width: 20rem;
+  max-width: 23rem;
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
@@ -81,4 +82,9 @@ h2 {
 .slider::-webkit-scrollbar-thumb {
   background-color: blueviolet;
   border-radius: 5px;
+}
+
+.tabs--stacked--icon .tab--btn i {
+  display: block;
+  margin-bottom: 5px;
 }
