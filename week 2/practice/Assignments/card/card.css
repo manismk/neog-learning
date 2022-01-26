@@ -18,8 +18,10 @@ body {
   display: flex;
   flex-direction: column;
   max-width: 320px;
+
   box-shadow: 2px 3px 10px 0px rgba(0, 0, 0, 0.8);
   border-radius: 0.5rem;
+  justify-self: center;
 }
 
 .card img {
@@ -118,7 +120,7 @@ body {
   width: 100%;
 
   position: absolute;
-  top: 145px;
+  top: 140px;
   background-color: rgba(255, 255, 255, 0.5);
 }
 
