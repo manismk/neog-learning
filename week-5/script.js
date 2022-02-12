@@ -135,6 +135,12 @@ const haveCyclePeople = family
   .filter((el) => el.haveCycle)
   .map((el) => el.name);
 
+// const haveCyclePeopleOnlyFilter = family.filter(
+//   (el) => (el.haveCycle && true).name
+// );
+
+// console.log(haveCyclePeopleOnlyFilter);
+
 console.log(haveCyclePeople);
 
 const haveCyclePeopleReduce = family.reduce(
@@ -257,6 +263,46 @@ console.log(inventoryWhoseQuantityZero);
 
 const num = 24345687;
 
-const seperateNumberByHyphen = (arr) => arr.map((e) => console.log(e));
+//2-23456-87
 
-// seperateNumberByHyphen(...num);
+const separateEvenByHyphen = num
+  .toString()
+  .split("")
+  .reduce((acc, curr, index, arr) => {
+    if (arr[index - 1] % 2 === 0 && curr % 2 === 0) acc = [...acc, "-", curr];
+    else acc = [...acc, curr];
+    return acc;
+  }, [])
+  .join("");
+
+console.log(separateEvenByHyphen);
+
+const convertUpper = (str) => str.toUpperCase();
+
+console.log(convertUpper("neog"));
+
+const vowelsUppercase = (str) =>
+  str
+    .split("")
+    .map((letter) =>
+      letter === "a" ||
+      letter === "e" ||
+      letter === "i" ||
+      letter === "o" ||
+      letter === "u"
+        ? letter.toUpperCase()
+        : letter
+    )
+    .join("");
+
+console.log(vowelsUppercase("neog"));
+
+console.log(
+  input
+    .reduce((acc, curr) => [...acc, ...curr], [])
+    .reduce((acc, curr) => {
+      if (acc[`${curr}`] && acc[`${curr}`]++) acc = { ...acc };
+      else acc = { ...acc, [curr]: 1 };
+      return acc;
+    }, {})
+);
