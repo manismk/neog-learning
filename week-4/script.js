@@ -1,3 +1,4 @@
+// Exercise - 1 to 4
 function strName(name, func) {
   func(name.length);
 }
@@ -32,6 +33,8 @@ function delayMessage(message, delay) {
 
 delayMessage("Tanay is more energetic today", 3000);
 
+//Exercise 9
+
 function fakeFetch(msg, shouldReject) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -43,6 +46,7 @@ function fakeFetch(msg, shouldReject) {
   });
 }
 
+//Exercise 11,12,13
 fakeFetch("mk")
   .then((sucess) => {
     console.log(sucess);
@@ -68,6 +72,7 @@ const syncCall = (msg1, msg2) => {
   });
 };
 
+//Exercise -15
 const asyncCall = async () => {
   try {
     const data = await fakeFetch("Tanay");
@@ -77,6 +82,7 @@ const asyncCall = async () => {
   }
 };
 
+//Exercise-16
 const asyncWaterFall = async (msg1, msg2) => {
   try {
     const data = await fakeFetch(msg1);
@@ -96,7 +102,7 @@ asyncWaterFall("tanay", "pratap");
 
 // Home works
 
-// set interval
+// set interval exercise 6
 
 const messagedelay = (message, delay) => {
   setInterval(() => {
@@ -121,6 +127,8 @@ const countDown = (number) => {
 
 countDown(5);
 
+// exercise -7
+
 // React code https://codesandbox.io/s/week-4-tany-hw-nv5yg?file=/src/App.js
 
 //get response length async
@@ -132,3 +140,25 @@ const getServerResponseLengthAsync = async (str) => {
 getServerResponseLengthAsync("hellomk").then((res) =>
   console.log(`132 ${res}`)
 );
+
+//Parallel calls
+
+// async function parallel() {
+//   var a = sleep();
+//   var b = sleep();
+//   await a;
+//   await b;
+// }
+
+const parallelCalls = async () => {
+  let firstCall = fakeFetch("First");
+  let SecondCall = fakeFetch("Second");
+
+  try {
+    const data1 = await firstCall;
+    const data2 = await SecondCall;
+    console.log(data1, data2);
+  } catch (e) {
+    console.log(e);
+  }
+};
