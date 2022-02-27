@@ -306,3 +306,64 @@ console.log(
       return acc;
     }, {})
 );
+
+const arr10 = [1, 2, 3, 52, 20, 7, 5, 6, 8, 9, 10];
+
+// sub of odd indices
+
+const sumOfOddIndices = arr10.reduce((acc, curr, index) => {
+  if (index % 2 !== 0) return acc + curr;
+  else return acc;
+}, 0);
+
+const maxNoOfArray = arr10.reduce((acc, curr) => {
+  if (curr > acc) return (acc = curr);
+  else return acc;
+}, 0);
+
+console.log(maxNoOfArray);
+
+const divBy10 = arr10.filter((item) => item % 10 === 0);
+
+console.log(divBy10);
+
+const evenIncBy1AndOddDecBy1 = arr10.map((item) =>
+  item % 2 === 0 ? item + 1 : item - 1
+);
+
+console.log(evenIncBy1AndOddDecBy1);
+
+const arr11 = ["apple", "orange", "mango", "papaya", "lemon"];
+
+const stringWithVowels = arr11.filter(
+  (item) =>
+    item.includes("a") ||
+    item.includes("e") ||
+    item.includes("i") ||
+    item.includes("e") ||
+    item.includes("u")
+);
+
+console.log(stringWithVowels);
+
+const strObj = arr11.reduce((acc, curr) => {
+  return { ...acc, [curr]: curr.length };
+}, {});
+
+console.log(strObj);
+
+const oneFunction =
+  (...funcs) =>
+  (num) =>
+    funcs.reduce((acc, curr) => curr(acc), num);
+
+const increment = (num) => num + 1;
+const square = (num) => num * num;
+const numMinus = (num) => num - 1;
+
+const callAll = oneFunction(increment, square, numMinus, square)(2);
+console.log(callAll);
+
+//https://mahogany-agenda-0a7.notion.site/FP-ES6-Practice-Exercises-39de414698884a408e4d24af1637a25b
+
+//Akansha func program question link
